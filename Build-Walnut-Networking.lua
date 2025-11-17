@@ -39,6 +39,11 @@ project "Walnut-Networking"
       defines { "WL_PLATFORM_LINUX" }
       files { "Platform/Linux/**.h", "Platform/Linux/**.cpp" }
       includedirs { "Platform/Linux" }
+   
+   filter "system:macosx"
+      defines { "WL_PLATFORM_MACOS" }
+      files { "Platform/MacOS/**.h", "Platform/MacOS/**.cpp" }
+      includedirs { "Platform/MacOS" }
 
   filter { "system:windows", "configurations:Debug" }	
       links
